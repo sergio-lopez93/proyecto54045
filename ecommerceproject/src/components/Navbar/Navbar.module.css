@@ -1,0 +1,15 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background: slategray;
+    padding: 2px
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+
+
