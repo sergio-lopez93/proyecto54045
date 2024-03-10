@@ -1,19 +1,18 @@
 import classes from "./Navbar.module.css"
 import CarWidget from "../CartWidget/carwidget"
-import ItemListContainer from "../ItemListContainer/itemlistcontainer"
-import Button from "../button/button"
+import { Link } from "react-router-dom"
 
 const Navbar = (props) => {
     console.log(classes)
     return (
-        <header className= {classes.header} >
-        <ItemListContainer greeting='Minimarket Express'/>
-        <div className={classes.buttons}>
-        <Button  label="Home" callBack={() => console.log("click home")}/>
-        <Button  label="Compras" callBack={() => console.log("click Compras")}/>
-        <Button  label="Contacto" callBack={() => console.log("click Contacto")}/>
-        <CarWidget/>
-        </div>
+        <header className={classes.header} >
+            <h1>Minimarket</h1>
+            <nav className={classes.buttons}>
+                <Link style={{margin:3}} to={'category/viveres'}>viveres</Link>
+                <Link style={{margin:3}} to={'category/bebidas instantaneas'}>bebidas instantaneas</Link>
+                <Link style={{margin:3}} to={'category/detergentes'}>detergentes</Link>
+                <CarWidget />
+            </nav> 
         </header>
     )
 }
